@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: karai <karai@student.42tokyo.jp>           +#+  +:+       +#+        */
+/*   By: karai <karai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 11:15:20 by karai             #+#    #+#             */
-/*   Updated: 2024/11/03 23:15:14 by karai            ###   ########.fr       */
+/*   Updated: 2024/11/24 15:23:43 by karai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ char	*get_next_line(int fd)
 // 			break ;
 // 		}
 // 		printf("%s", line);
-// 		printf("length %ld\n", strlen(line));
 // 		free(line);
 // 	}
 // 	close(fd);
