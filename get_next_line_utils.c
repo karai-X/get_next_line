@@ -6,7 +6,7 @@
 /*   By: karai <karai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:38:42 by karai             #+#    #+#             */
-/*   Updated: 2024/11/24 15:22:44 by karai            ###   ########.fr       */
+/*   Updated: 2024/12/01 10:18:37 by karai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,7 @@ bool	ft_get_next_buf(char buf[BUFFER_SIZE], t_list *lst_first,
 		return (true);
 	while (buf[i] != '\n' && i < BUFFER_SIZE && i < *read_byte)
 		i += 1;
-	if (buf[i] == '\n')
+	if (i != *read_byte && buf[i] == '\n')
 	{
 		*end_flag = 1;
 		i += 1;
@@ -130,7 +130,7 @@ bool	ft_get_next_buf(char buf[BUFFER_SIZE], t_list *lst_first,
 		return (false);
 	while (i + ++j < BUFFER_SIZE)
 		buf[j] = buf[i + j];
-	if (BUFFER_SIZE!=j)
+	if (j != BUFFER_SIZE)
 		buf[j] = '\0';
 	return (true);
 }
